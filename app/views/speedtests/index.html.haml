@@ -1,0 +1,15 @@
+%h1 Listing speedtests
+
+%table
+  %thead
+    %tr
+      %th Time
+      %th Upload
+      %th Download
+
+  %tbody
+    - @speedtests.each do |speedtest|
+      %tr
+        %td= speedtest.created_at
+        %td= speedtest.upload
+        %td= speedtest.download
