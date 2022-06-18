@@ -1,15 +1,9 @@
 %h1 Listing speedtests
 
-%table
-  %thead
-    %tr
-      %th Time
-      %th Upload
-      %th Download
+%h2 Download
+= column_chart @speedtests.average(:download)
 
-  %tbody
-    - @speedtests.each do |speedtest|
-      %tr
-        %td= speedtest.created_at
-        %td= speedtest.upload
-        %td= speedtest.download
+%hr
+
+%h2 Upload
+= column_chart @speedtests.average(:upload)

@@ -93,6 +93,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+    chartkick (4.2.0)
     childprocess (4.1.0)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
@@ -108,6 +109,8 @@ GEM
     erubis (2.7.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    groupdate (6.1.0)
+      activesupport (>= 5.2)
     haml (5.2.2)
       temple (>= 0.8.0)
       tilt
@@ -290,8 +293,10 @@ DEPENDENCIES
   bullet
   bundle-audit
   capybara
+  chartkick (~> 4.2)
   debug
   dotenv-rails
+  groupdate (~> 6.1)
   haml-rails
   importmap-rails
   jbuilder

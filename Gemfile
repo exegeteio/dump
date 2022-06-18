@@ -79,3 +79,7 @@ group :development, :test do
   gem "rubocop-rails_config"
   gem "dotenv-rails"
 end
+
+gem "chartkick", "~> 4.2"
+
+gem "groupdate", "~> 6.1"
