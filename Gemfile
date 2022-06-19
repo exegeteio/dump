@@ -69,12 +69,12 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+gem "haml-rails"
 
 group :development, :test do
   gem "annotate"
   gem "bullet"
   gem "bundle-audit"
-  gem "haml-rails"
   gem "rubocop-rails"
   gem "rubocop-rails_config"
   gem "dotenv-rails"
