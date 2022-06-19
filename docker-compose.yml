@@ -16,6 +16,7 @@ services:
     depends_on:
       - postgres
     environment:
+      SECRET_KEY_BASE: ${SECRET_KEY_BASE:-not_for_prod}
       BINDING: 0.0.0.0
       DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL: "true"
       DATABASE_URL: postgres://postgres:postgres@postgres:5432/
