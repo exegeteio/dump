@@ -7,7 +7,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
 
-  scope :api do
-    resources :speedtests, only: %i[create index]
-  end
+  resources :speedtests, only: %i[create index]
 end

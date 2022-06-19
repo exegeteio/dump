@@ -9,9 +9,11 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-100.times do |i|
-  Speedtest.create!(
-    upload: rand(10..100),
-    download: rand(100..1000)
-  )
+unless Rails.env.production?
+  100.times do |i|
+    Speedtest.create!(
+      upload: rand(10..100),
+      download: rand(100..1000)
+    )
+  end
 end
