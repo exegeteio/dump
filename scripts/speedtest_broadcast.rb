@@ -4,6 +4,9 @@ require "net/http"
 require "uri"
 require "active_support/all"
 
+ENDPOINT = ENV["ENDPOINT"] || "http://localhost:5001/speedtests"
+API_KEY = ENV["API_KEY"] || ""
+
 def parse_results(lines)
   result = Hash.new
   lines.each do |line|
@@ -23,7 +26,7 @@ def parse_results(lines)
 end
 
 Net::HTTP.post(
-  URI("http://localhost:3000/api/speedtests"),
-  parse_results(STDIN.readlines).merge(api_key: ENV["API_KEY"]).to_json,
+  URI(ENDPOINT),
+  parse_results(STDIN.readlines).merge(api_key: API_KEY).to_json,
   "Content-Type" => "application/json"
 )

@@ -81,6 +81,5 @@ test:
 #
 production:
   <<: *default
-  database: dump_production
-  username: dump
-  password: <%= ENV["DUMP_DATABASE_PASSWORD"] %>
+  database: dump
+  url: <%= ENV["DATABASE_URL"] %>
