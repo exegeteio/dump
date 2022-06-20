@@ -3,8 +3,8 @@
 # Table name: speedtests
 #
 #  id         :uuid             not null, primary key
-#  download   :integer
-#  upload     :integer
+#  download   :float
+#  upload     :float
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

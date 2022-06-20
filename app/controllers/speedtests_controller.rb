@@ -4,7 +4,11 @@ class SpeedtestsController < ApplicationController
 
   # GET /speedtests or /speedtests.json
   def index
-    @speedtests = Speedtest.where("created_at >= ?", 1.day.ago).group_by_hour_of_day(:created_at, format: "%l %P")
+    @speedtests = Speedtest.group_by_hour(
+      :created_at,
+      format: "%l %P %Y-%m-%d",
+      range: 1.day.ago..Time.zone.now
+    )
   end
 
   # POST /speedtests or /speedtests.json

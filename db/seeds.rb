@@ -12,8 +12,9 @@
 unless Rails.env.production?
   100.times do |i|
     Speedtest.create!(
+      created_at: i.hours.ago,
       upload: rand(10..100),
-      download: rand(100..1000)
+      download: rand(100..1_000)
     )
   end
 end
