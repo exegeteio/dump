@@ -1,5 +1,5 @@
 #### Base rails image, used for `rails new` and other commands.
-FROM ruby:3.1.2-alpine AS rails
+FROM ruby:3.2.2-alpine AS rails
 
 ENV BINDING 0.0.0.0
 ENV RAILS_LOG_TO_STDOUT true
@@ -54,7 +54,7 @@ RUN RAILS_ENV=production SECRET_KEY_BASE=not_for_prod bundle exec rake assets:pr
 RUN rm -rf tmp/cache vendor/assets lib/assets spec
 
 # Final image
-FROM ruby:3.1.2-alpine AS final
+FROM ruby:3.2.2-alpine AS final
 
 # Set Rails env
 ENV BINDING 0.0.0.0
